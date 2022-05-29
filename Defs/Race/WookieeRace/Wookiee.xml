@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>Wookiee</defName>
+		<label>Wookiee</label>
+
+		<description>Wookiee:
+Wookiees were a tall species of furry humanoids from the planet Kashyyyk, who could grow to a height of nearly three meters. They were covered from head to toe in a thick, shaggy coat of hair with water-shedding properties[1] that notably came in shades of brown, black, gray, and white. The species had two sexes, female and male. The latter grew long beards in adult life.The average male weighed 150 kilograms while the average female weighed 100 kilograms.
+
+Wookiees were big eaters, with the average adult requiring 3,500-6,000 calories a day of food. Their diet consisted of wild plants, berries, meat, and spices. They preferred their spices to be hot. While Wookiees did not like eating blosphi extract, it provided them with enough nutrition to survive. The literary collective term for Wookiees was a grove of Wookiees.</description>	
+		<statBases>
+			<MarketValue>1750</MarketValue>
+			<ComfyTemperatureMin>-52</ComfyTemperatureMin>
+			<ComfyTemperatureMax>8</ComfyTemperatureMax>
+			<ImmunityGainSpeed>2</ImmunityGainSpeed>
+			<CarryingCapacity>120</CarryingCapacity>
+			<MeleeDodgeChance>0.2</MeleeDodgeChance>
+			<LeatherAmount>110</LeatherAmount>
+			<ToxicSensitivity>0.4</ToxicSensitivity>
+			<SocialImpact>0.7</SocialImpact>
+			<RoyalFavorValue>3</RoyalFavorValue>
+			
+			<InjuryHealingFactor>3.0</InjuryHealingFactor>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.1</ArmorRating_Heat>
+		</statBases>
+		
+		<alienRace>
+		    <generalSettings>
+			
+				<forcedRaceTraitEntries>
+			        <li>
+						<defName>Nudist</defName>
+					</li>
+					<li>
+						<defName>BodyPurist</defName>
+						 <chance>30</chance>
+					</li>
+				</forcedRaceTraitEntries>
+				<disallowedTraits>
+					<li>
+						<defName>Transhumanist</defName>
+					</li>
+				</disallowedTraits>
+				
+				<traitCount>1</traitCount>
+				
+				<immuneToAge>true</immuneToAge>
+				<maleGenderProbability>0.5</maleGenderProbability>
+				<factionRelations>
+					<li>
+						<factions>
+							<li>PlayerColony</li>
+							<li>PlayerTribe</li>
+						</factions>
+						<goodwill>
+							<min>-15</min>
+							<max>10</max>
+						</goodwill>
+					</li>
+				</factionRelations>
+				
+				<!-- <customHeadDrawSize>(1.25, 1.25)</customHeadDrawSize> -->
+				
+				<alienPartGenerator>
+					<aliencrowntypes Inherit="False">
+						<li>Default</li>
+						<!-- <li>BackwardStraight</li> -->
+					</aliencrowntypes>
+					<alienbodytypes Inherit="False">
+						<li>Hulk</li>
+						<!-- <li>Thin</li> -->
+					</alienbodytypes>
+
+					<!-- <useGenderedHeads>true</useGenderedHeads> -->
+					<useGenderedBodies>false</useGenderedBodies>
+					<customDrawSize>(1.3, 1.3)</customDrawSize>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<!--Gray-->
+									<li>
+										<weight>10</weight>
+										<only>(150,150,150)</only>
+									</li>
+									<!--Brown-->
+									<li>
+										<weight>10</weight>
+										<only>(110,80,50)</only>
+									</li>
+								</options>
+							</first>
+
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>RGBA(1,1,0,1)</only>
+									</li>
+								</options>
+							</second> 
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+		    </generalSettings>
+			
+			<graphicPaths Inherit="False">
+				<li>
+					<head>WookieePawn/Heads/</head>
+					<body>WookieePawn/Base/</body>
+				</li>
+			</graphicPaths>
+		
+			<styleSettings>
+				<li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+				<li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+			</styleSettings>
+			
+			<raceRestriction>
+				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+				
+				<whiteApparelList>
+					
+				</whiteApparelList>
+
+			</raceRestriction>
+		</alienRace>
+		
+		<tools>
+			<li>
+				<label>Left Claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Cut</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>Right Claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Cut</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>Teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>Head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.05</chanceFactor>
+			</li>
+		</tools>
+		
+		<race>
+			<ageGenerationCurve>
+				<points>
+					<li>(30,0)</li>
+					<li>(50,1)</li>
+					<li>(75,20)</li>
+					<li>(140,80)</li>
+					<li>(210,100)</li>
+					<li>(370,50)</li>
+					<li>(500,0)</li>
+				</points>
+			</ageGenerationCurve>
+
+			<hediffGiverSets>
+				<!-- <li>OrganicStandard</li>
+				<li>Human</li> -->
+			</hediffGiverSets>
+		</race>
+		
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

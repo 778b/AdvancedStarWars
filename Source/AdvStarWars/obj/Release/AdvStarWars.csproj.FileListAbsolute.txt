@@ -1,0 +1,6 @@
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\AdvancedStarWars\Assemblies\AdvStarWars.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\AdvancedStarWars\Assemblies\AdvStarWars.pdb
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\AdvancedStarWars\Source\AdvStarWars\obj\Release\AdvStarWars.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\AdvancedStarWars\Source\AdvStarWars\obj\Release\AdvStarWars.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\AdvancedStarWars\Source\AdvStarWars\obj\Release\AdvStarWars.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\AdvancedStarWars\Source\AdvStarWars\obj\Release\AdvStarWars.pdb

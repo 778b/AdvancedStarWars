@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<!-- ============================ Wookiee Base ========================== -->
+
+	<PawnKindDef Name="WookieeBase" Abstract="True">
+		<!--<defaultFactionType>WookieeFaction</defaultFactionType> -->
+		<race>Wookiee</race>
+
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Tribal</li>
+					<li>WookieeBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+
+		<initialWillRange>7~8</initialWillRange>
+		<initialResistanceRange>75~84</initialResistanceRange>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<invNutrition>4</invNutrition>
+	</PawnKindDef>
+
+	<!-- ============================ Wookiee Civilian Base ========================== -->
+
+	<PawnKindDef Name="WookieeCivBase" ParentName="WookieeBase" Abstract="True">
+		<combatPower>25</combatPower>
+		<race>Wookiee</race>
+		<itemQuality>Normal</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>
+			<min>0.2</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>300</min>
+			<max>900</max>
+		</apparelMoney>
+
+		<techHediffsMoney>
+			<min>200</min>
+			<max>300</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.01</techHediffsChance>
+		<invNutrition>2.55</invNutrition>
+		<inventoryOptions>
+			<skipChance>0.45</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>25</min>
+						<max>70</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<!-- ============================ Wookiee Civilians ========================== -->
+
+	<PawnKindDef ParentName="WookieeCivBase">
+		<defName>WookieeColonist</defName>
+		<label>colonist</label>
+		<race>Wookiee</race>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="WookieeCivBase">
+		<defName>WookieeHistSpeaker</defName>
+		<label>Hist speaker</label>
+		<labelPlural>Hist speakers</labelPlural>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>100</minGenerationAge>
+		<maxGenerationAge>200</maxGenerationAge>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="WookieeCivBase">
+		<defName>WookieeSlave</defName>
+		<label>slave</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="WookieeCivBase">
+		<defName>WookieeRefugee</defName>
+		<label>refugee</label>
+	</PawnKindDef>
+
+
+	<!-- ============================ Wookiee Security ========================== -->
+
+	<PawnKindDef ParentName="WookieeCivBase">
+		<defName>WookieeGuard</defName>
+		<label>guard</label>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>150</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.5</min>
+			<max>1.8</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>700</min>
+			<max>4000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>1400</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NeolithicRanged</li>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>200</min>
+			<max>5000</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.03</techHediffsChance>
+		<invNutrition>2.55</invNutrition>
+		<inventoryOptions>
+			<skipChance>0.95</skipChance>
+			<thingDef>Silver</thingDef>
+			<countRange>
+				<min>30</min>
+				<max>100</max>
+			</countRange>
+		</inventoryOptions>
+	</PawnKindDef>
+
+
+</Defs>

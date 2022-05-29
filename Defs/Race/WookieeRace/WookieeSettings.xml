@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<AlienRace.RaceSettings>
+		<defName>WookieeSettings</defName>
+	
+		<pawnKindSettings>
+			<!-- colonists -->
+			<startingColonists>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>WookieeColonist</li>
+						</kindDefs>
+						<chance>5.0</chance>
+					</li>
+					<li>
+						<kindDefs>
+							<li>WookieeRefugee</li>
+						</kindDefs>
+						<chance>3</chance>
+					</li>
+					<li>
+						<kindDefs>
+							<li>WookieeSlave</li>
+						</kindDefs>
+						<chance>2</chance>
+					</li>
+				</pawnKindEntries>
+				
+				<factionDefs>
+					<li>PlayerColony</li> 
+				</factionDefs>
+				
+			</li>
+			</startingColonists>
+			
+			<!-- slave -->
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>WookieeSlave</li>
+					</kindDefs>
+					<chance>2.0</chance>
+				</li>
+			</alienslavekinds>
+
+			<!-- refugee -->
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>WookieeRefugee</li>
+					</kindDefs>
+					<chance>2.0</chance>
+				</li>
+			</alienrefugeekinds>
+		</pawnKindSettings>
+		
+	</AlienRace.RaceSettings>
+</Defs>

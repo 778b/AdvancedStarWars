@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<AlienRace.RaceSettings>
+		<defName>TwilekSettings</defName>
+	
+		<pawnKindSettings>
+			<!-- colonists -->
+			<startingColonists>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>TwilekColonist</li>
+						</kindDefs>
+						<chance>10.0</chance>
+					</li>
+					<li>
+						<kindDefs>
+							<li>TwilekRefugee</li>
+						</kindDefs>
+						<chance>5</chance>
+					</li>
+					<li>
+						<kindDefs>
+							<li>TwilekSlave</li>
+						</kindDefs>
+						<chance>5</chance>
+					</li>
+				</pawnKindEntries>
+				
+				<factionDefs>
+					<li>PlayerColony</li> 
+				</factionDefs>
+				
+			</li>
+			</startingColonists>
+			
+			<!-- slave -->
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>TwilekSlave</li>
+					</kindDefs>
+					<chance>5.0</chance>
+				</li>
+			</alienslavekinds>
+
+			<!-- refugee -->
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>TwilekRefugee</li>
+					</kindDefs>
+					<chance>5.0</chance>
+				</li>
+			</alienrefugeekinds>
+			
+			<!-- wanderer -->
+			<alienwandererkinds>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>TwilekWanderer</li>
+						</kindDefs>
+						<chance>5.0</chance>
+					</li>
+				</pawnKindEntries>
+				
+			</li>
+			</alienwandererkinds>
+			
+		</pawnKindSettings>
+		
+	</AlienRace.RaceSettings>
+</Defs>

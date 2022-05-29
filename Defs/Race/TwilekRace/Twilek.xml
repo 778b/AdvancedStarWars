@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>Twilek</defName>
+		<label>Twilek</label>
+
+		<description>Twilek:
+The species had two sexes, male and female.
+
+Twileks were a species of tall humanoids whose skin spanned a vast array of colors. Their most distinctive feature was the pair of prehensile appendages that sprouted from the crown or base of their skulls, known as lekku, or head-tails. Although Twi'leks normally had two lekku, some individuals had four. Super sensitive lekku could grab and hold objects and react to the slightest touch. A damaged lekku could cause serious harm to a Twi'lek's health.</description>
+		
+		<statBases>
+			<MarketValue>1750</MarketValue>
+			<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+			<ComfyTemperatureMax>46</ComfyTemperatureMax>
+			<LeatherAmount>75</LeatherAmount>
+			<RoyalFavorValue>3</RoyalFavorValue>
+		</statBases>
+		
+		<alienRace>
+		    <generalSettings>
+				<maleGenderProbability>0.5</maleGenderProbability>
+				<factionRelations>
+					<li>
+						<factions>
+							<li>PlayerColony</li>
+							<li>PlayerTribe</li>
+						</factions>
+						<goodwill>
+							<min>-15</min>
+							<max>10</max>
+						</goodwill>
+					</li>
+				</factionRelations>
+
+				<alienPartGenerator>
+					<aliencrowntypes Inherit="False">
+						<li>ForwardStraight</li>
+						<li>BackwardStraight</li>
+					</aliencrowntypes>
+
+					<useGenderedHeads>true</useGenderedHeads>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<!--Red-->
+									<li>
+										<weight>10</weight>
+										<only>(185,0,0)</only>
+									</li>
+									<!--Yellow-->
+									<li>
+										<weight>10</weight>
+										<only>(185,185,0)</only>
+									</li>
+									<!--Gray-->
+									<li>
+										<weight>10</weight>
+										<only>(150,150,150)</only>
+									</li>
+									<!--Brown-->
+									<li>
+										<weight>10</weight>
+										<only>(155,70,0)</only>
+									</li>
+									<!--Biruza-->
+									<li>
+										<weight>10</weight>
+										<only>(0,100,100)</only>
+									</li>
+									<!--Blue-->
+									<li>
+										<weight>20</weight>
+										<only>(0,121,162)</only>
+									</li>
+									<!-- ShrekGreen-->
+									<li>
+										<weight>20</weight>
+										<only>(35,127,0)</only>
+									</li>
+									<!-- Orange-->
+									<li>
+										<weight>20</weight>
+										<only>(255,122,0)</only>
+									</li>
+								</options>
+							</first>
+
+							<second Class="ColorGenerator_Options">
+								<options>
+									
+									 <!-- orange -->
+									<li>
+										<weight>20</weight>
+										<only>RGBA(1,.5,0,1)</only>
+									</li>
+									<li>
+										<weight>15</weight>
+										<only>RGBA(1,.8,0,1)</only>
+									</li>
+
+									<!--  yellow  -->
+									<li>
+										<weight>10</weight>
+										<only>RGBA(1,1,0,1)</only>
+									</li>
+								</options>
+							</second> 
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+		    </generalSettings>
+			
+			<graphicPaths Inherit="False">
+				<li>
+					<head>TwilekPawn/Heads/</head>
+				</li>
+			</graphicPaths>
+		
+			<styleSettings>
+				<li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+			</styleSettings>
+		</alienRace>
+		
+		<race>
+			<ageGenerationCurve>
+				<points>
+					<li>(14,0)</li>
+					<li>(16,1)</li>
+					<li>(19,20)</li>
+					<li>(25,80)</li>
+					<li>(35,100)</li>
+					<li>(50,50)</li>
+					<li>(70,0)</li>
+				</points>
+			</ageGenerationCurve>
+
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+				<li>Human</li>
+			</hediffGiverSets>
+		</race>
+		
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

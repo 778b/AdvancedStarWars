@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+
+  <name>Advanced Star Wars</name>
+  <author>778b</author>
+  <packageId>AdvStarWars.Mod</packageId>
+  
+  <supportedVersions>
+    <li>1.0</li>
+	<li>1.1</li>
+	<li>1.2</li>
+	<li>1.3</li>
+  </supportedVersions>
+  
+	
+
+  <modDependencies>
+		<li>
+			<packageId>erdelf.HumanoidAlienRaces</packageId>
+			<displayName>Humanoid Alien Races 2.0</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=839005762</steamWorkshopUrl>
+		</li>
+  </modDependencies>
+  
+  <loadAfter>
+	<li>erdelf.HumanoidAlienRaces</li>
+  </loadAfter>
+
+  
+  
+  <description><![CDATA[
+- Few new races: Twileks, Wookiees.
+	
+
+Mod version: 0.2 <color=#008000>Stable</color>]]>
+  </description> 
+  
+  
+</ModMetaData>
+

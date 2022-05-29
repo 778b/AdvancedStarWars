@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<!-- ============================ Twilek Base ========================== -->
+
+	<PawnKindDef Name="TwilekBase" Abstract="True">
+		<!--<defaultFactionType>TwilekFaction</defaultFactionType> -->
+		<race>Twilek</race>
+
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Tribal</li>
+					<li>TwilekBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+
+		<initialWillRange>7~8</initialWillRange>
+		<initialResistanceRange>75~84</initialResistanceRange>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<invNutrition>4</invNutrition>
+
+		<apparelTags>
+			<li>Neolithic</li>
+		</apparelTags>
+		<weaponTags>
+			<li>NonNeolithicOnlyMelee</li>
+			<li>NeolithicMeleeAdvanced</li>
+			<li>NeolithicRanged</li>
+			<li>NeolithicRangedBasic</li>
+			<li>NeolithicRangedHeavy</li>
+		</weaponTags>
+
+		
+	</PawnKindDef>
+
+	<!-- ============================ Twilek Civilian Base ========================== -->
+
+	<PawnKindDef Name="TwilekCivBase" ParentName="TwilekBase" Abstract="True">
+		<combatPower>25</combatPower>
+		<race>Twilek</race>
+		<itemQuality>Normal</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>
+			<min>0.2</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>300</min>
+			<max>900</max>
+		</apparelMoney>
+
+		<techHediffsMoney>
+			<min>200</min>
+			<max>300</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.01</techHediffsChance>
+		<invNutrition>2.55</invNutrition>
+		<inventoryOptions>
+			<skipChance>0.45</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>25</min>
+						<max>70</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<!-- ============================ Twilek Civilians ========================== -->
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekColonist</defName>
+		<label>colonist</label>
+		<race>Twilek</race>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekHistSpeaker</defName>
+		<label>Hist speaker</label>
+		<labelPlural>Hist speakers</labelPlural>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>100</minGenerationAge>
+		<maxGenerationAge>200</maxGenerationAge>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekTrader</defName>
+		<label>colony trader</label>
+		<trader>true</trader>
+		<weaponMoney>
+			<min>200</min>
+			<max>400</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>SimpleGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekSlave</defName>
+		<label>slave</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekRefugee</defName>
+		<label>refugee</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekWanderer</defName>
+		<label>wanderer</label>
+	</PawnKindDef>
+
+
+	<!-- ============================ Twilek Security ========================== -->
+
+	<PawnKindDef ParentName="TwilekCivBase">
+		<defName>TwilekGuard</defName>
+		<label>guard</label>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>150</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.5</min>
+			<max>1.8</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>700</min>
+			<max>4000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>1400</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NeolithicRanged</li>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>200</min>
+			<max>5000</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.03</techHediffsChance>
+		<invNutrition>2.55</invNutrition>
+		<inventoryOptions>
+			<skipChance>0.95</skipChance>
+			<thingDef>Silver</thingDef>
+			<countRange>
+				<min>30</min>
+				<max>100</max>
+			</countRange>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TwilekBase">
+		<defName>TwilekGrenadier</defName>
+		<combatPower>70</combatPower>
+		<label>grenadier</label>
+
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2.3</max>
+		</gearHealthRange>
+		<apparelTags>
+			<li>Outlander</li>
+			<li>Military</li>
+			<li>BeltDefensePop</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>800</min>
+			<max>1400</max>
+		</apparelMoney>
+		<!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
+		<weaponMoney>
+			<min>600</min>
+			<max>1000</max>
+		</weaponMoney>
+
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+	</PawnKindDef>
+
+
+
+</Defs>
